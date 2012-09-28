@@ -1,0 +1,27 @@
+import "google/protobuf/descriptor.proto";
+
+package torrone;
+
+extend google.protobuf.FileOptions {
+	required uint64 layer = 50000;
+}
+
+extend google.protobuf.MessageOptions {
+	required uint64 id = 50000;
+}
+
+message Handshake {
+	// your onion ID
+	required string id;
+
+	// the advice is to use an UUID as cookie
+	required string cookie;
+}
+
+message Message {
+	required uint64 layer = 1;
+	required uint64 id = 2;
+
+	// this contains the already encoded message specified in the first two fields
+	required bytes data = 3;
+}

@@ -1,0 +1,39 @@
+import "torrone.proto";
+
+package torrone.profile;
+
+option (layer) = 1;
+
+message Client {
+	option (id) = 1;
+
+	required string name = 1;
+	required string version = 2;
+}
+
+message Me {
+	option (id) = 2;
+
+	required string name = 1;
+	required string description = 2;
+}
+
+message Status {
+	option (id) = 3;
+
+	enum Value {
+		ONLINE  = 1;
+		BUSY    = 2;
+		AWAY    = 3;
+		OFFLINE = 4;
+	}
+
+	required Value mode = 1;
+}
+
+message Avatar {
+	option (id) = 4;
+
+	required string mime = 1;
+	required bytes data = 2;
+}
