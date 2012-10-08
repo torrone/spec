@@ -1,35 +1,20 @@
-torrone - P2P through Tor hidden services
-=========================================
-torrone aims to *standardize* and implement a base protocol and various
-extensions for P2P usage through Tor hidden services.
+torrone - anonymous, decentralized and resilient communities
+============================================================
+torrone aims to make it easy for people to create decentralized, anonymous and
+resilient communities with *just* Tor, torrone and a browser.
 
-The result will be an anonymous and secure P2P network with various
-capabilities.
+It will provide a forum, instant messanging, file sharing, microblogging, voice
+chat and other kind of goodies.
 
-The main area we want to target is instant messanging and other kinds of text
-based goods, like a twitter-like status updating extension, a message
-broadcasting extension and a search extension.
+Everything will be **crumb** centric, a crumb is basically a circle with a
+certain UUID, if you know the UUID and aren't banned by consensus, you can
+interact with the other parties being part of that crumb.
 
-File sharing will also be possible, but considering the additional overhead and
-slowness of hidden services that won't really be good.
+There will also be the chance to put stuff under no crumb at all, which will
+make it publically accessible, this will be used to support web accessible
+microblogging and the like.
 
-Small footprint voice chat with [opus](http://www.opus-codec.org/) will also be
-investigated.
-
-Target audience and usage
--------------------------
-The idea is to let small communities have a secure and anonymous way to talk
-and transfer files with eachother without the need for a server with configured
-IRC or XMPP.
-
-It could also be interesting to have a status updating decentralized shim with
-an outfacing website for that kind of thing. Decentralized and anonymous
-microblogging.
-
-Maybe even a small decentralized forum made of the small known entities of the
-community.
-
-**There is no intention to make it a *global* P2P network.**
+Multiple identities (onion IDs and profiles) will be usable, but discouraged.
 
 Protocol design and choices
 ---------------------------
@@ -50,3 +35,5 @@ to everyone who may need it.
 
 This choice comes because if we don't do this, someone else will do it anyway
 without even caring about the repercussions.
+
+**To be clear, the plan is to help in fixing the issues.**
