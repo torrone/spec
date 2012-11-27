@@ -1,0 +1,23 @@
+import "torrone.proto";
+
+package torrone.chat.private;
+
+option (layer) = 2;
+
+message Message {
+	option (id) = 1;
+
+	required string content = 1;
+}
+
+message Typing {
+	option (id) = 2;
+
+	enum Mode {
+		START = 1;
+		PAUSE = 2;
+		STOP  = 3;
+	}
+
+	required Mode mode = 1;
+}

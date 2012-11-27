@@ -1,0 +1,66 @@
+import "torrone.proto";
+
+package torrone.chat.group;
+
+option (layer) = 3;
+
+message Invite {
+	option (id) = 1;
+
+	required string id = 1;
+	repeated string modes = 2;
+}
+
+message Participants {
+	option (id) = 2;
+
+	required string id = 1;
+	repeated string items = 2;
+}
+
+message IsParticipating {
+	option (id) = 3;
+
+	required string id = 1;
+	optional bool   answer = 2;
+}
+
+message Join {
+	option (id) = 4;
+
+	required string id = 1;
+}
+
+message Leave {
+	option (id) = 5;
+
+	required string id = 1;
+	optional string reason = 2;
+}
+
+message Invited {
+	option (id) = 6;
+
+	required string id = 1;
+	required string who = 2;
+}
+
+message Message {
+	option (id) = 7;
+
+	required string id = 1;
+	required string content = 2;
+}
+
+message Typing {
+	option (id) = 8;
+
+	enum Mode {
+		START = 1;
+		PAUSE = 2;
+		STOP  = 3;
+	}
+
+	required string id = 1;
+	required Mode mode = 2;
+}
